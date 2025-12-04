@@ -65,6 +65,7 @@ awk 'BEGIN {printf "%-10s %-10s\n", "Name", "Age"} {printf "%-10s %-10s\n", $1, 
 
 # Join two files (by name)
 awk 'NR==FNR {a[$1]=$2; next} {print $2, a[$2]}' people.txt salary.txt
+awk 'BEGIN {print "Name Age Salary"} NR==FNR {a[$1]=$2;next} FNR > 1 {print $2, a[$2], $3}' people.txt salary.txt
 
 # Find top salary
 awk 'NR>1 && $3>max {max=$3; name=$2} END {print "Top earner:", name, "with", max}' salary.txt
