@@ -32,7 +32,7 @@ awk 'BEGIN {print "ID", "Name", "Salary"} NR > 1 { if($3 > 6000) print }' salary
 awk 'NR > 1 && $3 > 6000' salary.txt
 awk 'NR > 1 && $3 > 6000 {print $2, $3}' salary.txt
 
-# Print only first and second line.
+# Print only first and second line. => NF represents only number of fields in the currently processed line.
 awk 'NR == 1 || NR == NF' people.txt
 
 # Print the first and last line
@@ -52,10 +52,12 @@ awk 'NR==2 {max=$3; min=$3} NR>2 {if($3>max) max=$3; if($3<min) min=$3} END {pri
 
 # Print formatted output with headers
 awk 'BEGIN {print "Name\tSalary"} NR>1 {print $2 "\t" $3}' salary.txt
+awk 'BEGIN {OFS="\t"; print "Name","Salary"} NR > 1 {print $2, $3}' salary.txt
 
 # Change field separator (use : as delimiter)
 echo -e "John:25\nSara:30\nAli:22\nNoor:28" > colon.txt
 awk -F: '{print $1, $2}' colon.txt
+echo -e "John:25\nSara:30\nAli:22\nNoor:28" | awk 'BEGIN {FS=":"; OFS=" "} {print $1, $2}'
 
 # Use BEGIN for block headers
 awk 'BEGIN {print "People List: "} {print NR, $1, $2} END {print "Total: ", NR, "records"}' people.txt
@@ -77,3 +79,5 @@ awk '$2>25 {printf "%s is %d years old\n", $1, $2}' people.txt
 # Print unique names
 echo -e "1 Alice 90\n2 Bob 80\n3 Alice 95\n4 Charlie 85\n5 Bob 88" > file.txt
 awk '{count[$2]++} END {for (val in count) if (count[val]==1) print val}' file.txt
+
+echo -e "1 Alice 90\n2 Bob 80\n3 Alice 95\n4 Charlie 85\n5 Bob 88" | awk '{count[$2]++} END {for (val in count) if (count[val]==1) print val}'
