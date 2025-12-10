@@ -81,3 +81,6 @@ echo -e "1 Alice 90\n2 Bob 80\n3 Alice 95\n4 Charlie 85\n5 Bob 88" > file.txt
 awk '{count[$2]++} END {for (val in count) if (count[val]==1) print val}' file.txt
 
 echo -e "1 Alice 90\n2 Bob 80\n3 Alice 95\n4 Charlie 85\n5 Bob 88" | awk '{count[$2]++} END {for (val in count) if (count[val]==1) print val}'
+
+# By default Record Separator(RS) is newline (\n). To check it:
+awk 'RS ~ /\n/ {print "TRUE"}' people.txt
