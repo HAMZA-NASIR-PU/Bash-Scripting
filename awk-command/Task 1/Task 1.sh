@@ -37,6 +37,7 @@ awk 'NR == 1 || NR == NF' people.txt
 
 # Print the first and last line
 awk 'NR==1 {print} {last=$0} END {print last}' people.txt
+awk 'NR == 1; END {print;}' people.txt
 
 # Increase salary by 10%
 awk 'NR > 1 {print $1, $2, $3*1.10}' salary.txt
