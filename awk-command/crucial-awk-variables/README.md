@@ -26,11 +26,13 @@ Jones
 84
 77
 
+
 Gondrol
 2321
 56
 58
 45
+
 
 RinRao
 2122
@@ -38,11 +40,13 @@ RinRao
 37
 65
 
+
 Edwin
 2537
 78
 67
 45
+
 
 Dayan
 2415
@@ -50,7 +54,6 @@ Dayan
 47
 20
 EOF
-
 
 awk 'BEGIN {FS="\n";RS="\n\n";OFS=" ";ORS="\n"} {print NR, $1,$2,$3,$4,$5}' student.txt
 ```
@@ -65,11 +68,13 @@ Jones
 84
 77
 
+
 Gondrol
 2321
 56
 58
 45
+
 
 RinRao
 2122
@@ -77,11 +82,13 @@ RinRao
 37
 65
 
+
 Edwin
 2537
 78
 67
 45
+
 
 Dayan
 2415

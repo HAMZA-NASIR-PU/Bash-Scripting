@@ -24,11 +24,18 @@ awk '$2 > 25' people.txt
 # Print people whose name start with 'A'
 awk '$1 ~ /^A/' people.txt
 
+# Print people whose name not start with 'A'
+awk '$1 !~ /^A/' people.txt
+
 # Ignore case and print people with 'n' in their name.
 awk 'tolower($1) ~ /n/' people.txt
 
+# Print length of names.
+awk '{print length($0)}' people.txt
+
 # Filter salaries greater than 6000
 awk 'BEGIN {print "ID", "Name", "Salary"} NR > 1 { if($3 > 6000) print }' salary.txt
+awk 'BEGIN {print "ID","Name","Salary"} NR > 1 && $3 > 6000 {print;}' salary.txt
 awk 'NR > 1 && $3 > 6000' salary.txt
 awk 'NR > 1 && $3 > 6000 {print $2, $3}' salary.txt
 
@@ -85,3 +92,8 @@ echo -e "1 Alice 90\n2 Bob 80\n3 Alice 95\n4 Charlie 85\n5 Bob 88" | awk '{count
 
 # By default Record Separator(RS) is newline (\n). To check it:
 awk 'RS ~ /\n/ {print "TRUE"}' people.txt
+
+# https://stackoverflow.com/questions/33347421/remove-redundancy-in-a-file-based-on-two-fields-using-awk
+
+echo -e "A B XX XX\nA C XX XX\nB A XX XX\nB D XX XX\nB E XX XX\nC A XX XX"
+awk '!seen[$1,$2]++ && !seen[$2,$1]' file
