@@ -1,0 +1,6 @@
+INFO 2025-12-10 10:01:22 Application started
+INFO 2025-12-10 10:02:10 User login successful
+WARN 2025-12-10 10:03:45 Disk space low
+ERROR 2025-12-10 10:04:12 Database connection failed
+INFO 2025-12-10 10:05:33 Scheduled job executed
+ERROR 2025-12-10 10:06:09 Timeout while calling API

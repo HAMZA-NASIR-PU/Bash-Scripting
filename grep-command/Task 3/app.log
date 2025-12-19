@@ -1,0 +1,10 @@
+Dec 10 10:01:22 server1 sshd[1201]: Accepted password
+Dec 10 11:15:45 server1 sshd[1205]: Failed password
+Dec 11 09:00:01 server1 sshd[1300]: Accepted password
+Dec 11 09:05:33 server1 sshd[1301]: Failed password
+Dec 12 08:22:10 server1 sshd[1400]: Failed password
+Dec 12 08:22:10 server1 sshd[1400]: Accepted password
+Dec 13 08:22:10 server1 sshd[1400]: Failed password
+Dec 14 08:22:10 server1 sshd[1400]: Accepted password
+Dec 14 08:22:10 server1 sshd[1400]: Failed password
+Dec 15 08:22:10 server1 sshd[1400]: Failed password

@@ -1,0 +1,7 @@
+1  INFO  Server starting
+2  INFO  Loading config
+3  INFO  Connecting to DB
+4  ERROR Database connection failed
+5  INFO  Retrying connection
+6  INFO  Retrying connection
+7  INFO  Server shutdown

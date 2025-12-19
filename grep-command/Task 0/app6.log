@@ -1,0 +1,5 @@
+INFO Request received
+INFO Validating user
+ERROR Invalid token
+INFO Sending error response
+INFO Closing connection

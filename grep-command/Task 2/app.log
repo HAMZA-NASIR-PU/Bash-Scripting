@@ -1,0 +1,5 @@
+ERROR Invalid password attempt
+INFO User logged out
+ERROR: root login failed
+ERROR root password changed
+WARN Unauthorized access

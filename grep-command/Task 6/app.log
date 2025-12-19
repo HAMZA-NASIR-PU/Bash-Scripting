@@ -1,0 +1,5 @@
+2025-12-10 10:00:01 serviceA[120]: started
+2025-12-10 10:05:10 serviceA[120]: crashed with exit code 1
+2025-12-10 10:06:55 serviceB[210]: crashed with exit code 2
+2025-12-10 10:07:30 serviceC[310]: stopped
+2025-12-10 10:09:44 serviceA[120]: crashed with exit code 139

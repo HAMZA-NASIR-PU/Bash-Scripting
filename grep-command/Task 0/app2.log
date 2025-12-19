@@ -1,0 +1,4 @@
+INFO Server started
+ERROR Database connection failed
+INFO Retrying connection
+ERROR INTERNEAL SERVER CRASHED

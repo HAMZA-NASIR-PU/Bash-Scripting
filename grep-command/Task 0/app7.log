@@ -1,0 +1,8 @@
+INFO  Application started
+ERROR Failed to connect to database
+ERROR_TIMEOUT Connection took too long
+WARN  Low memory
+ERR
+ERR Disk not found
+ERR12345 Something strange
+DEBUG Error handler initialized

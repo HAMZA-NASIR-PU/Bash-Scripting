@@ -1,0 +1,5 @@
+root:x:0:0:root:/root:/bin/bash
+admin:x:1001:1001:Admin User:/home/admin:/bin/bash
+backup:x:1002:1002:Backup User:/home/backup:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+devops:x:1003:1003:DevOps User:/home/devops:/bin/zsh
