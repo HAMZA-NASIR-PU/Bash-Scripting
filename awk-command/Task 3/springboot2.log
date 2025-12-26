@@ -1,0 +1,67 @@
+2025-12-13T13:33:54.316Z TRACE 18268 --- [0.0-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (1:INTEGER) <- [1179]
+2025-12-13T13:33:54.317Z DEBUG 18268 --- [0.0-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        ed1_0.event_id,
+        ed1_0.id,
+        ed1_0.end_date,
+        ed1_0.is_public_holiday,
+        ed1_0.start_date 
+    from
+        event_date ed1_0 
+    where
+        ed1_0.event_id=?
+2025-12-13T13:33:54.317Z TRACE 18268 --- [0.0-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (1:INTEGER) <- [1179]
+2025-12-13T13:33:54.318Z DEBUG 18268 --- [0.0-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        ec1_0.event_id,
+        ec1_0.id,
+        ec1_0.value 
+    from
+        event_category ec1_0 
+    where
+        ec1_0.event_id=?
+2025-12-13T13:33:54.319Z TRACE 18268 --- [0.0-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (1:INTEGER) <- [1179]
+2025-12-13T13:33:54.326Z DEBUG 18268 --- [0.0-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        e1_0.id,
+        e1_0.created_on,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.image_name,
+        e1_0.is_public_holiday,
+        e1_0.number_of_people,
+        e1_0.parking_description,
+        e1_0.parking_providing,
+        e1_0.start_date,
+        e1_0.title,
+        e1_0.updated_on,
+        e1_0.cn 
+    from
+        event e1_0 
+    where
+        1=1 
+        and (
+            e1_0.start_date between ? and ? 
+            or e1_0.end_date between ? and ? 
+            or e1_0.start_date<=? 
+            and e1_0.end_date>=?
+        ) 
+    order by
+        e1_0.id 
+    limit
+        ?, ?
+2025-12-13T13:33:54.327Z TRACE 18268 --- [0.0-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP) <- [2025-11-29 19:00:00.0]
+2025-12-13T13:33:54.327Z TRACE 18268 --- [0.0-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (2:TIMESTAMP) <- [2026-01-10 19:00:00.0]
+2025-12-13T13:33:54.327Z TRACE 18268 --- [0.0-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (3:TIMESTAMP) <- [2025-11-29 19:00:00.0]
+2025-12-13T13:33:54.327Z TRACE 18268 --- [0.0-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (4:TIMESTAMP) <- [2026-01-10 19:00:00.0]
+2025-12-13T13:33:54.327Z TRACE 18268 --- [0.0-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (5:TIMESTAMP) <- [2025-11-29 19:00:00.0]
+2025-12-13T13:33:54.327Z TRACE 18268 --- [0.0-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (6:TIMESTAMP) <- [2026-01-10 19:00:00.0]
+2025-12-13T13:33:54.327Z TRACE 18268 --- [0.0-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (7:INTEGER) <- [0]
+2025-12-13T13:33:54.327Z TRACE 18268 --- [0.0-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (8:INTEGER) <- [100]
+2025-12-13T13:33:54.337Z DEBUG 18268 --- [0.0-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-12-13T13:33:54.337Z DEBUG 18268 --- [0.0-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 1 of 1 containing com.school.portal.models.Event instances]
+2025-12-13T13:33:54.418Z DEBUG 18268 --- [0.0-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-12-13T13:33:54.540Z  INFO 18268 --- [0.0-8080-exec-6] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-12-13T13:33:54.540Z  INFO 18268 --- [0.0-8080-exec-7] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-12-13T13:33:54.541Z  INFO 18268 --- [0.0-8080-exec-5] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-12-13T13:33:54.542Z  INFO 18268 --- [0.0-8080-exec-4] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 

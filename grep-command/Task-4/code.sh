@@ -9,6 +9,7 @@ grep -E '^DENY TCP .*:(22|80|443)$' app.log
 # Interesting but serious case
 grep -E '^DENY TCP.*:[22|80|443]$' app.log
 
+
 # A character class matches exactly ONE character, chosen from: 2   |   8   0   4   3
 # Duplicates are ignored. This is equivalent to: [0-8|]
 
