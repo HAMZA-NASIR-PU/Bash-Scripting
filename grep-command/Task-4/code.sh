@@ -3,6 +3,8 @@
 # Wrong Attempt
 grep -E '^DENY TCP.*(22|80|443)' app.log
 
+grep -E '^DENY TCP [^:]*:(22|80|443)$' app.log
+
 # Correct
 grep -E '^DENY TCP .*:(22|80|443)$' app.log
 
