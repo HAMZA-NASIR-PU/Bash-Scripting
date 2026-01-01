@@ -14,6 +14,9 @@ grep -E '^Dec 11 .* sshd\[[0-9]+\]: Failed password$' syslog.log
 # According to regex101: Match step 40
 grep -E 'Dec 11 [^[]* sshd\[[0-9]+\]: Failed password$' app.log
 
+# More better performance: Match step 30
+grep -E 'Dec 11 [^[]*\[[0-9]+\]: Failed password$' app.log
+
 # Show of Dec 10 and 11
 
 grep -E '^Dec (10|11) .*Failed password' app.log
