@@ -1,0 +1,7 @@
+Dec 21 01:12:45 server sudo: pam_unix(sudo:session): session opened for user root
+Dec 21 09:14:01 server sudo: pam_unix(sudo:session): session opened for user root
+Dec 21 03:44:11 server sudo: pam_unix(sudo:session): session opened for user admin
+Dec 21 17:55:22 server sudo: pam_unix(sudo:session): session opened for user root
+Dec 23 05:33:11 server sudo: pam_unix(sudo:session): session opened for user admin
+Dec 23 05:00:00 server sudo: pam_unix(sudo:session): session opened for user admin
+Dec 24 06:00:00 server sudo: pam_unix(sudo:session): session opened for user admin
