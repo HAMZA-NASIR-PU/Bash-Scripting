@@ -6,4 +6,4 @@
 
 # Senior-level thinking: grep cannot maintain state across lines.
 
-awk -f detect_crash_loop app.log
+awk -f detect_crash_loop.awk app.log

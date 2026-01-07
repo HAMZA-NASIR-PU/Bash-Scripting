@@ -13,5 +13,6 @@ grep -E '^[A-Z][a-z]{2} [ 0-9][0-9] 0[0-5]:[0-5][0-9]:[0-5][0-9] .* sudo:' app.l
 # Correct solution.
 grep -E '^[A-Z][a-z]{2} [ 0-9][0-9] 0[0-4]:[0-5][0-9]:[0-5][0-9] .* sudo:' app.log
 
-
+# For better performance
+grep -E '^[A-Z][a-z]{2} [ 0-9][0-9] 0[0-4]:[0-5][0-9]:[0-5][0-9] [^:]+sudo:' app.log
 
