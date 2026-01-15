@@ -1,0 +1,3 @@
+Login from 192.168.0.1 successful
+Ping 8.8.8.8
+Invalid IP: 999.88.0.0
