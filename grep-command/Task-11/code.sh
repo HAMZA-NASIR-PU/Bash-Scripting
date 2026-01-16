@@ -16,3 +16,5 @@ grep -P 'GET (?!/health)\S+ 5\d\d' app.log
 # Better Performance
 grep -P 'GET /(?!health)[^ ]+ 5\d\d$' app.log
 
+grep -P '(?<!/health) 5\d\d$' app.log
+
