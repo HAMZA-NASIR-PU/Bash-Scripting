@@ -9,6 +9,8 @@ grep -P 'Failed password for (?!root\b|daemon\b|syslog\b)[a-zA-Z][a-zA-Z0-9_-]* 
 
 grep -P 'Failed password for (?!root\b|daemon\b|syslog\b)[A-za-z0-9_-]+' app.log
 
+grep -P 'Failed password for (?!root\b|daemon\b|syslog)' app.log
+
 # The general format is X(?!Y), which matches "X" only if it is not immediately followed by "Y". 
 
 # A lookahead does NOT consume text, it only checks what comes next at that exact position. 
