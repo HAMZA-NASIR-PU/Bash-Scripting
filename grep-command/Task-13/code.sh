@@ -1,6 +1,3 @@
-
-# grep -E '^prod-[a-z]+-[0-9]{2}$' hosts.txt
-
 # Infrastructure audit:
 
 # * Hostnames must follow company convention
@@ -18,5 +15,5 @@
 
 # Match only valid production hostnames
 
-grep -E '^prod-[a-z]+-[0-9]{2}$' hosts.txt
+grep -E '^prod-[a-z]+-[0-9]{2}$' app.log
 

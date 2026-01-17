@@ -17,3 +17,10 @@ grep -E 'sshd.*Failed password' app.log \
 | uniq -c \
 | awk '$1 > 5'
 
+
+
+# That regex is doign more steps
+grep -E 'sshd.*Failed password' app.log
+
+# To make it better
+grep -E 'sshd\[[0-9]+\]: Failed password' app.log
