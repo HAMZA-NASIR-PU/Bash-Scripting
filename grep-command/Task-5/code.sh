@@ -13,3 +13,6 @@ awk -F: '$7 !~ /\/bin\/bash$/' app.log
 
 awk -F: '$7 !~ "/bin/bash$"' app.log
 
+
+# PCRE solution
+grep -P '(?<!/bin/bash)$' app.log
