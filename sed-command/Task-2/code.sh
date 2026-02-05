@@ -16,4 +16,4 @@ sed '/\/health/d' app.log
 sed '/\/health/Id' app.log
 
 # Delete multiple noisy endpoints.
-sed '/\/health\|\/metrics/d' app.log
+echo -e "GET /health 200\nGET /api/login 500\nGET /api/metrics 200" | sed '/\/health\|\/metrics/d'
