@@ -1,0 +1,7 @@
+INFO  App started
+INFO  Cache warmed
+WARN  Slow response
+ERROR DB connection failed
+INFO  Retrying
+ERROR Timeout while calling payment service
+INFO  Done

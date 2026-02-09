@@ -1,0 +1,8 @@
+2026-02-01 02:11:03 INFO  App started
+2026-02-01 02:11:10 INFO  User login
+2026-02-01 02:11:15 ==== START INCIDENT ====
+2026-02-01 02:11:16 ERROR DB connection failed
+2026-02-01 02:11:17 ERROR Retry failed
+2026-02-01 02:11:20 WARN  Circuit breaker open
+2026-02-01 02:11:30 ==== END INCIDENT ====
+2026-02-01 02:11:40 INFO  App recovered
