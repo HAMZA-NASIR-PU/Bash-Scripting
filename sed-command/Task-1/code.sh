@@ -31,3 +31,8 @@ echo 'fooERRORbar ERROR bar' | sed 's/ERROR/WARN/g'
 # * partial token edits
 # * emergency cleanup
 
+
+# Change db port from 5432 to 3306
+
+sed -i.bak '/^db.port/s/5432/3306/' app.conf
+

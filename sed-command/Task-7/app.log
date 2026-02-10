@@ -1,0 +1,2 @@
+user=alice token=abcdef123456 scope=read
+user=bob   token=xyz987654321 scope=write
