@@ -21,6 +21,10 @@
 
 sed 's/token=[^ ]*/token=REDACTED/g' app.log
 
+# That command will not work due to that + is not a quantifier in
+# BRE. It is a prt of ERE(extended regex).
+sed 's/token=[^ ]+/token=REDACTED/g' app.log
+
 
 echo 'user=a token=abc123 token=def456' \
 | sed 's/token=[^ ]*/token=REDACTED/g'
