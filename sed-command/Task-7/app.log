@@ -1,2 +1,4 @@
 user=alice token=abcdef123456 scope=read
 user=bob   token=xyz987654321 scope=write
+user=john  apikey=5assasa2552623 scope=write
+user=doe   password=3255sass6a scope=write
