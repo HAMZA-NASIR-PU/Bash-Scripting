@@ -1,13 +1,19 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-export BAR="bar"
-echo "In main process: $BAR"
+echo "Parent process ID = $$, BASHPID = $BASHPID"
+
+VAR="parent"
+
+echo "Before child: $VAR"
+
 (
-    echo "In child process: $BAR"
-    BAR="foo"
-    (
-        echo "In sub-child process: $BAR"
-    )
+    # Simple variables are not inherited.
+    # That variable is created for the child process.
+    VAR="child"
+    echo "Child process ID = $$, BASHPID = $BASHPID"
+    echo "Inside child: $VAR"
 )
-echo "In main process: $BAR"
+
+# Remains Same
+echo "After child: $VAR"
 
