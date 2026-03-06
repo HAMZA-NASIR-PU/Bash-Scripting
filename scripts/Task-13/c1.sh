@@ -7,11 +7,12 @@ VAR="parent"
 echo "Before child: $VAR"
 
 (
-    # Simple variables are not inherited.
-    # That variable is created for the child process.
-    VAR="child"
+    # Shell variables are inherited by subshells but not by external process.
     echo "Child process ID = $$, BASHPID = $BASHPID"
     echo "Inside child: $VAR"
+    (
+        echo "Sub-child process ID = $$, BASHPID = $BASHPID"
+    )
 )
 
 # Remains Same
