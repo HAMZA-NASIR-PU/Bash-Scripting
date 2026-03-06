@@ -8,4 +8,6 @@ echo "Before child: $VAR"
     echo "Inside child, after changing VAR  = $VAR"
 )
 
+# Remains Same
 echo "After child: $VAR"
+

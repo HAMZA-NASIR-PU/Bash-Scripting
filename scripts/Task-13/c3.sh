@@ -9,5 +9,7 @@ echo "In main process: $BAR"
         echo "In sub-child process: $BAR"
     )
 )
+
+# Remains Same
 echo "In main process: $BAR"
 
