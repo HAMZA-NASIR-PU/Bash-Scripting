@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# touch script.sh notes.txt image.png deploy.sh data.txt config.json
+# mkdir scripts
+
 for file in *; do
 
     ext="${file##*.}"
