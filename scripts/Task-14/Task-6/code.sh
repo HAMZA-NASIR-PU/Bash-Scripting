@@ -19,3 +19,13 @@ for file in "Task "*; do
     echo "$file --> $number"
 done
 
+
+##### Another way
+
+for file in "Task "*; do
+
+    new_name=$(echo "$file" | sed 's/ /-/g')
+    echo "$file --> $new_name"
+    
+done
+
