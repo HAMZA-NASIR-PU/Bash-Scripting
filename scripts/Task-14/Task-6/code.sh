@@ -24,7 +24,7 @@ done
 
 for file in "Task "*; do
 
-    new_name=$(echo "$file" | sed 's/ /-/g')
+    new_name=$(echo "$file" | sed 's/ /-/g') # $(echo "$file" | tr ' ' '-')
     echo "$file --> $new_name"
     
 done
