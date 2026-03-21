@@ -2,11 +2,11 @@
 
 while read -r line; do
 
-    if [[ $line == INFO* ]]; then
+    if [[ "$line" == INFO* ]]; then
         echo "[OK] ${line#INFO }"
-    elif [[ $line == ERROR* ]]; then
+    elif [[ "$line" == ERROR* ]]; then
         echo "[CRITICAL] ${line#ERROR }"
-    elif [[ $line == WARN* ]]; then
+    elif [[ "$line" == WARN* ]]; then
         echo "[WARNING] ${line#WARN }"
     else
         echo "[UNKNOWN] $line"

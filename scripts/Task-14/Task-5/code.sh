@@ -9,17 +9,17 @@ if ((${#password} < 8)); then
     CHECK="false"
 fi
 
-if [[ ! $password =~ [[:digit:]] ]]; then
+if [[ ! "$password" =~ [[:digit:]] ]]; then
     echo "Password must contain a number."
     CHECK="false"
 fi
 
-if [[ $password =~ [[:space:]] ]]; then
+if [[ "$password" =~ [[:space:]] ]]; then
     echo "Password must not contain spaces."
     CHECK="false"
 fi
 
-if [[ ! $password =~ [[:upper:]] ]]; then
+if [[ ! "$password" =~ [[:upper:]] ]]; then
     echo "Password must contain an Uppercase letter."
     CHECK="false"
 fi
