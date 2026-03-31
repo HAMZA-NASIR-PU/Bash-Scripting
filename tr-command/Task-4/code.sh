@@ -12,5 +12,5 @@ EOF
 
 cat messy_spaces.txt | tr -s ' '
 
-Collapse repeated colons :::: → : in a PATH-like string:
+# Collapse repeated colons :::: → : in a PATH-like string:
 echo "usr::::bin::local::sbin" | tr -s ':'
