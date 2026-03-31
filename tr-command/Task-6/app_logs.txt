@@ -1,0 +1,4 @@
+User hamza logged in at 10:33 with PID 221
+Disk usage at 95% on /dev/sda1
+CPU spike detected: 98% -- CRITICAL
+Request ID: 987654321 arrived from 192.168.1.50

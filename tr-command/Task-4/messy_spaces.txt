@@ -1,0 +1,4 @@
+ERROR     Disk      Usage     95%
+User      hamza        logged    in
+CPU      Load:      98%       Critical
+PID      221        Started    at     10:33
