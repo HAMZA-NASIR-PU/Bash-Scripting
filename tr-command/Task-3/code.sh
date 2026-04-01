@@ -11,7 +11,7 @@ Alert#443: CPU spike --> 98%!!! ***CRITICAL***
 EOF
 
 
-cat messy.txt | tr '[[:alnum:]] \n' 
+cat messy.txt | tr -cd '[[:alnum:]] \n' 
 
 # Keep only letters (extract human-readable text)
 cat messy.txt | tr -cd '[:alpha:]\n'
