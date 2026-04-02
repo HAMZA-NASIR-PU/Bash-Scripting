@@ -1,4 +1,6 @@
 
+# NOTE: tr command does not work on a line. It works on a character (letter, digit, whitespace, escape characters like \n \r \t);
+
 # Normalize Line Endings
 
 # Convert a file with mixed Windows (\r\n) and Unix (\n) line endings to pure Unix-style (\n) endings.
