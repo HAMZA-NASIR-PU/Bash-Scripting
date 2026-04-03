@@ -25,9 +25,11 @@ BEGIN {
     for (i = 1; i <= length(dirs); i++) {
         split(dirs[i], seg, "/")
         for (j = 1; j <= length(seg); j++)
-            printf("%*s%s\n", j*2, "", seg[j])
+            printf("%*s%s\n", j*2, "", seg[j]) # It indents each segment by j * 2 spaces, then prints seg[j].
         print ""
     }
 }
 '
+
+# Don't use length(array) in mawk, since it is used in GNU awk.
 
