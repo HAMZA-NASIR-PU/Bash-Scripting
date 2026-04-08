@@ -1,3 +1,5 @@
+# https://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/
+
 # File Setup
 
 echo -e "John 25\nSara 30\nAli 22\nNoor 28" > people.txt
@@ -36,6 +38,7 @@ awk '{print length($0)}' people.txt
 # Filter salaries greater than 6000
 awk 'BEGIN {print "ID", "Name", "Salary"} NR > 1 { if($3 > 6000) print }' salary.txt
 awk 'BEGIN {print "ID","Name","Salary"} NR > 1 && $3 > 6000 {print;}' salary.txt
+awk 'BEGIN {print "ID","Name","Salary"} NR > 1 && $3 > 6000' salary.txt
 awk 'NR > 1 && $3 > 6000' salary.txt
 awk 'NR > 1 && $3 > 6000 {print $2, $3}' salary.txt
 

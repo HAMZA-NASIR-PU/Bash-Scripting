@@ -14,3 +14,6 @@ echo "Hello_World 123" | tr -c 'a-z' '-'
 # Replace everything except whitespace with .
 printf 'Hello\nWorld 123\tABC' | tr -c '[:space:]' '.'
 
+# Get PATH env of running docker container.
+docker inspect <container-id> | jq '.[0].Config.Env[0]' | tr -d '"' | cut -d= -f2
+
