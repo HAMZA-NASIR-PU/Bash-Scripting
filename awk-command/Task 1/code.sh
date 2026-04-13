@@ -41,6 +41,7 @@ awk 'BEGIN {print "ID","Name","Salary"} NR > 1 && $3 > 6000 {print;}' salary.txt
 awk 'BEGIN {print "ID","Name","Salary"} NR > 1 && $3 > 6000' salary.txt
 awk 'NR > 1 && $3 > 6000' salary.txt
 awk 'NR > 1 && $3 > 6000 {print $2, $3}' salary.txt
+awk 'NR == 1 { print; next; } $3 > 6000 { print; }' salary.txt
 
 # Print only first and second line. => NF represents only number of fields in the currently processed line.
 awk 'NR == 1 || NR == NF' people.txt
@@ -60,6 +61,7 @@ awk 'NR>1 {sum+=$3; count++} END {print "Average Salary: ", sum/count}' salary.t
 
 # Print max and min salary
 awk 'NR==2 {max=$3; min=$3} NR>2 {if($3>max) max=$3; if($3<min) min=$3} END {print "Max: ", max, " | Min: ", min}' salary.txt
+awk 'NR == 2 { max=$3; min=$3; next; } $3 > max { max=$3; } $3 < min { min=$3; } END {print "Max: ", max, " | Min: ", min}' salary.txt
 
 # Print formatted output with headers
 awk 'BEGIN {print "Name\tSalary"} NR>1 {print $2 "\t" $3}' salary.txt
