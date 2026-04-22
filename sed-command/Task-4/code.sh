@@ -27,4 +27,6 @@ sed '/^enable_feature=true/s/^/#/' config.yml
 # On lines that start with enable_feature=true, substitute the start of the line with #.
 
 
+# Doing more than one stuff in the same command.
+sed '/^timeout/d;/^enable_feature=true/s/^/#/;' config.yml
 

@@ -52,4 +52,7 @@
 
 
 
+# Another solution
+# docker inspect spring-boot-app | jq '.[0].Config.Env' | tr -d '[],"' | awk 'NF'
+
 
