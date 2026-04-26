@@ -56,4 +56,7 @@
 # Optimized solution.
 # docker inspect spring-boot-app | jq '.[0].Config.Env' | tr -d '[],"' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//;/^[[:space:]]*$/d'
 
+# Another solution
+# docker inspect spring-boot-app | jq '.[0].Config.Env' | tr -d '[],"' | awk 'NF'
+
 

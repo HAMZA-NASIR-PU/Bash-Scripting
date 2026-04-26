@@ -49,3 +49,6 @@ sed -n '/START INCIDENT/,/END INCIDENT/ {
 }' app.log
 
 
+# For printing only token and apiKey lines.
+sed -En '/token|apikey/p' app.log
+
