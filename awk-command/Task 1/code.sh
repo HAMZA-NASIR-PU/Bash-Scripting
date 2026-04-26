@@ -81,6 +81,7 @@ awk 'BEGIN {printf "%-10s %-10s\n", "Name", "Age"} {printf "%-10s %-10s\n", $1, 
 # Join two files (by name)
 awk 'NR==FNR {a[$1]=$2; next} {print $2, a[$2]}' people.txt salary.txt
 awk 'BEGIN {print "Name Age Salary"} NR==FNR {a[$1]=$2;next} FNR > 1 {print $2, a[$2], $3}' people.txt salary.txt
+awk 'NR == FNR {arr[$1]=$2;next;} FNR == 1 {print "ID","Name","Salary","Age";next;} {print $1,$2,$3,arr[$2]}' people.txt salary.txt
 
 # Find top salary
 awk 'NR>1 && $3>max {max=$3; name=$2} END {print "Top earner:", name, "with", max}' salary.txt
@@ -90,7 +91,7 @@ awk '$2>25 {printf "%s is %d years old\n", $1, $2}' people.txt
 
 
 # Print unique names
-echo -e "1 Alice 90\n2 Bob 80\n3 Alice 95\n4 Charlie 85\n5 Bob 88" > file.txt
+printf '1 Alice 90\n2 Bob 80\n3 Alice 95\n4 Charlie 85\n5 Bob 88\n' > file.txt
 awk '{count[$2]++} END {for (val in count) if (count[val]==1) print val}' file.txt
 
 echo -e "1 Alice 90\n2 Bob 80\n3 Alice 95\n4 Charlie 85\n5 Bob 88" | awk '{count[$2]++} END {for (val in count) if (count[val]==1) print val}'
