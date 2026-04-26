@@ -36,3 +36,7 @@ echo 'fooERRORbar ERROR bar' | sed 's/ERROR/WARN/g'
 
 sed -i.bak '/^db.port/s/5432/3306/' app.conf
 
+# To only change the `db.host` and not `backup.db.host`
+sed '/^db.host/s/old-db.internal/new-db.internal/;' app.conf
+
+
