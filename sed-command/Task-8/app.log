@@ -1,5 +1,5 @@
 [
-  "RDS_HOST=database-1.rdsinstanceid.us-east-1.rds.amazonaws.com",
+  "RDS_HOST=mydatabase.rdsinstanceid.us-east-1.rds.amazonaws.com",
   "RDS_USERNAME=myrdsusername",
   "RDS_PASSWORD=mypassowrd",
   "RDS_DB=mydb",
