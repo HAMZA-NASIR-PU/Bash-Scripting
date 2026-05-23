@@ -15,4 +15,6 @@ awk -F: '$7 !~ "/bin/bash$"' app.log
 
 
 # PCRE solution
+# By applying a negative lookbehind
 grep -P '(?<!/bin/bash)$' app.log
+
