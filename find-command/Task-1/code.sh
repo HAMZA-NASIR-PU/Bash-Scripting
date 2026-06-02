@@ -51,4 +51,12 @@ find . -maxdepth 1 -type d
 # ./swagger
 # ./util
 
+# Put all *.java files in a file
+
+find src -name "*.java" > sources.txt
+
+# Then compile them via javac command:
+javac -cp "./lib/*" -d ./bin @sources.txt
+
+
 
