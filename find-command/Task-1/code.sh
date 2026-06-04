@@ -59,4 +59,12 @@ find src -name "*.java" > sources.txt
 javac -cp "./lib/*" -d ./bin @sources.txt
 
 
+# Find all java files
+find ./src -name "*.java"
+
+# Find all properties file in a spring boot project
+find ./src -name "*.properties"
+
+
+
 
