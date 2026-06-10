@@ -13,3 +13,24 @@ find . -type d \( -name node_modules -o -name .git -o -name dist -o -name .vs -o
 #               YES → print it
 #               NO  → do nothing
 
+# Refactored command
+
+find . \
+    \( \
+        -type d \( \
+                -name node_modules -o \
+                -name .git -o \
+                -name dist -o \
+                -name .vs -o \
+                -name .vscode -o \
+                -name .angular \
+            \) -prune \
+    \) -o \
+    -type f -print
+
+
+
+find . -type d \( -name .git -o -name .idea -o -name target -o -name bin  \) -prune -o -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.avif" -o -name "*.webp" \) -prune -o  -type f -print
+
+
+
