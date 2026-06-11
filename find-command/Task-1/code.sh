@@ -32,7 +32,12 @@ find . -type d
 # ./swagger
 # ./util
 
+# This command gives a warning:
 
+find . -type d -maxdepth 1
+
+# find: warning: you have specified the global option -maxdepth after the argument -type, but global options are not positional, i.e.,
+# -maxdepth affects tests specified before it as well as those specified after it.  Please specify global options before other arguments.
 find . -maxdepth 1 -type d
 
 # .
