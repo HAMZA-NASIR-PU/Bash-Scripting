@@ -6,8 +6,7 @@ cd lab
 
 touch "UserDTO.java"
 touch "Order DTO.java"
-touch "Customer
-DTO.java"
+touch "Customer DTO.java"
 touch "PaymentDTO.java"
 
 echo "DTO" > "UserDTO.java"
@@ -16,5 +15,5 @@ echo "DTO" > "Customer
 DTO.java"
 echo "DTO" > "PaymentDTO.java"
 
-
+find ./lab -type f -print0 | xargs -0 printf '%s is a file.\n'
 
