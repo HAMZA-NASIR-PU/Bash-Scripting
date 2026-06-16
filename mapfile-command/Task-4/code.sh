@@ -7,6 +7,6 @@ for file in "${bigFiles[@]}"; do
     ls -lh "$file";
 done
 
-echo "Total big files: ${bigFiles[@]}";
+echo "Total big files: ${#bigFiles[@]}";
 
 
