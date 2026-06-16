@@ -7,6 +7,8 @@
 
 grep -P '^([a-zA-Z])([a-zA-Z])([a-zA-Z])\2\1$' /usr/share/dict/words
 
+grep -P '(\S)(\S)(\S)(\2)(\1)' app.log
+
 
 # AWK solution
 awk -f palindrome.awk app.log
