@@ -1,6 +1,8 @@
 
 # Load a list of servers into an array.
 
+# Second main concept: Iterating over arrays in bash scripting.
+
 cat > servers.txt <<EOF
 web01
 web02
