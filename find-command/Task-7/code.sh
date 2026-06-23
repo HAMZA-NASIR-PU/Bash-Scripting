@@ -14,3 +14,12 @@ find ./src/main/java/com/example/demo/dto/ -iname "Event*" -type f -print0 | whi
 find ./src/main/java/com/school/portal/dto/ -iname "Event*" -type f -print0 | tr '\0' '\n'
 
 
+### CRUCIAL COMMANDS FOR SPRING BOOT PROJECT
+
+find ./src/main/java/com/school/portal/service/ -type f -iname "event*" -exec echo "***{}***" \; -exec cat {} \; | clip
+find ./src/main/java/com/school/portal/controller/EventController.java -exec echo "***{}***" \; -exec cat {} \; | clip
+find ./src/main/java/com/school/portal/models/ \( -type f -iname "*scheduler*" -o -iname "event.java" \) -exec echo "***{}***" \; -exec cat {} \; | clip
+find ./src/main/java/com/school/portal/dto/ -type f -iname "EventRequestDTO*" -exec echo "***{}***" \; -exec cat {} \; | clip
+find ./src/main/java/com/school/portal/models/ \( -type f -iname "*scheduler*" -o -iname "event.java" \) -exec echo "***{}***" \; -exec cat {} \; | clip
+
+
