@@ -23,3 +23,6 @@ find ./src/main/java/com/school/portal/dto/ -type f -iname "EventRequestDTO*" -e
 find ./src/main/java/com/school/portal/models/ \( -type f -iname "*scheduler*" -o -iname "event.java" \) -exec echo "***{}***" \; -exec cat {} \; | clip
 
 
+### CRUCIAL COMMANDS FOR ANGULAR PROJECT
+
+
