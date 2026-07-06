@@ -3,3 +3,5 @@
 
 find /var -type f -mtime 0 | grep -E '\.(conf|yml|log|hash|json)$'
 
+# Note that the grep command is getting their input from the standard input.
+
