@@ -2,14 +2,15 @@
 
 # Compare $@ and $*
 
-echo 'Using "$@":'
+echo "All args: $@";
 
 for arg in "$*"; do
-    echo "$arg"
+        echo "[$arg]";
 done
 
-echo 'Using "$*":'
+printf '\n\n';
 
 for arg in "$@"; do
-    echo "$arg"
+        echo "[$arg]";
 done
+
