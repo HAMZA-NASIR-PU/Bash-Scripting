@@ -1,0 +1,45 @@
+{
+  "company": "TechCorp",
+  "employees": [
+    {
+      "id": 101,
+      "name": "Alice",
+      "department": "Engineering",
+      "salary": 90000,
+      "skills": ["Java", "Spring Boot", "AWS"],
+      "active": true
+    },
+    {
+      "id": 102,
+      "name": "Bob",
+      "department": "Engineering",
+      "salary": 95000,
+      "skills": ["Angular", "TypeScript", "Docker"],
+      "active": true
+    },
+    {
+      "id": 103,
+      "name": "Charlie",
+      "department": "HR",
+      "salary": 60000,
+      "skills": ["Recruitment", "Excel"],
+      "active": false
+    },
+    {
+      "id": 104,
+      "name": "David",
+      "department": "DevOps",
+      "salary": 110000,
+      "skills": ["Linux", "Terraform", "Kubernetes", "AWS"],
+      "active": true
+    },
+    {
+      "id": 105,
+      "name": "Emma",
+      "department": "Finance",
+      "salary": 70000,
+      "skills": ["SAP", "Excel"],
+      "active": true
+    }
+  ]
+}
