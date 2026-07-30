@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Concept of globbing in bash keyword [[
+
 while read -r line; do
 
     if [[ "$line" == INFO* ]]; then
