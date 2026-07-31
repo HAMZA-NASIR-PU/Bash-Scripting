@@ -1,0 +1,5 @@
+INFO Server started
+ERROR Database failed
+WARN Memory usage high
+INFO Request received
+ERROR Timeout occurred
