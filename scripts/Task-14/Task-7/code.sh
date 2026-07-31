@@ -1,26 +1,32 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Understand the reading of a file in a while loop via pipe and via redirection operator.
+# Demonstrates the difference between:
+#   1. Reading a file using input redirection (<)
+#   2. Reading a file through a pipeline (|)
+#
+# In Bash, each command in a pipeline executes in a subshell (by default).
+# Therefore, variables modified inside the pipeline are not visible afterwards.
 
-counter=0;
+counter=0
 
-# Reading a file via redirection operator.
+# ------------------------------
+# Example 1: Input Redirection
+# ------------------------------
 while read -r line; do
-    ((counter++));
+    ((counter++))
 done < app.log
 
-printf 'Total Lines: %s\n' $counter 
+printf 'Total lines (redirection): %d\n' "$counter"
 
-counter=0;
+counter=0
 
+# ------------------------------
+# Example 2: Pipeline
+# ------------------------------
 cat app.log | while read -r line; do
-    echo 'Reading a line inside sub-shell';
-    ((counter++));
-
+    echo "Reading a line inside a subshell..."
+    ((counter++))
 done
 
-# This will print 0 because the while loop runs inside a sub-shell.
-printf 'Total lines: %s\n' $counter; # 0
-
-
-
+# The counter remains unchanged because the loop ran in a subshell.
+printf 'Total lines (pipeline): %d\n' "$counter"
