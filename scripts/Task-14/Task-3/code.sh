@@ -14,9 +14,9 @@ for file in *; do
     elif [[ $ext == "json" ]]; then
         echo "$file -> JSON FILE"
     else
-        if [[ -f "$file" ]]; then
+        if [[ -f "$file" ]]; then # [ -f "$file" ]
             echo "$file is a file."
-        elif [[ ! -f "$file" ]]; then
+        elif [[ ! -f "$file" ]]; then  # [ -d "$file" ]
             echo "$file is not a file."
         fi
     fi
