@@ -9,6 +9,8 @@ if ((${#password} < 8)); then
     CHECK="false"
 fi
 
+# The right hand side must be an extended regex when using =~ operator.
+
 if [[ ! "$password" =~ [[:digit:]] ]]; then
     echo "Password must contain a number."
     CHECK="false"
