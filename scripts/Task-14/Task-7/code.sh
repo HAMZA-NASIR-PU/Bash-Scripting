@@ -7,6 +7,8 @@
 # In Bash, each command in a pipeline executes in a subshell (by default).
 # Therefore, variables modified inside the pipeline are not visible afterwards.
 
+# -r flag of read command => Do not treat backslashes as escape characters.
+
 counter=0
 
 # ------------------------------

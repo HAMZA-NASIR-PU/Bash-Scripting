@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# mkdir "Task 1" "Task 2" "Task 3" "Task 4"
+# mkdir "Task "{1..20}".txt"
 
 for file in Task\ *; do
     # Replace space with dash
