@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-read -p "Enter password: " username
+read -p "Enter username: " username
 
 if [ -z "$username" ]; then
     echo "Username is empty."
