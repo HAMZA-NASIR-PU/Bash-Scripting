@@ -79,8 +79,15 @@ awk 'BEGIN {print "People List: "} {print NR, $1, $2} END {print "Total: ", NR, 
 awk 'BEGIN {printf "%-10s %-10s\n", "Name", "Age"} {printf "%-10s %-10s\n", $1, $2}' people.txt
 
 # Join two files (by name)
-awk 'NR==FNR {a[$1]=$2; next} {print $2, a[$2]}' people.txt salary.txt
-awk 'BEGIN {print "Name Age Salary"} NR==FNR {a[$1]=$2;next} FNR > 1 {print $2, a[$2], $3}' people.txt salary.txt
+awk 'BEGIN { print "Name", "Age", "Salary" } NR==FNR {a[$1]=$2;} NR != FNR && FNR > 1 {print $2, a[$2], $3;}' people.txt salary.txt
+# The above command gives the following output.
+# Name Age Salary
+# John 25 5000
+# Sara 30 7000
+# Ali 22 5500
+# Noor 28 7200
+
+# The next keyword stops the execution for the current input line.
 awk 'NR == FNR {arr[$1]=$2;next;} FNR == 1 {print "ID","Name","Salary","Age";next;} {print $1,$2,$3,arr[$2]}' people.txt salary.txt
 
 # Find top salary
