@@ -96,10 +96,15 @@ awk 'NR>1 && $3>max {max=$3; name=$2} END {print "Top earner:", name, "with", ma
 # Show people older than 25 with formatted message
 awk '$2>25 {printf "%s is %d years old\n", $1, $2}' people.txt
 
+# Both blocks are executed for each line.
+awk ' { print "****"; } { print "++++"; }' people.txt
 
 # Print unique names
 printf '1 Alice 90\n2 Bob 80\n3 Alice 95\n4 Charlie 85\n5 Bob 88\n' > file.txt
 awk '{count[$2]++} END {for (val in count) if (count[val]==1) print val}' file.txt
+
+# Give count of each name.
+awk '{ count[$2]++; } END { for(name in count) print name, count[name]; }' file.txt
 
 echo -e "1 Alice 90\n2 Bob 80\n3 Alice 95\n4 Charlie 85\n5 Bob 88" | awk '{count[$2]++} END {for (val in count) if (count[val]==1) print val}'
 
