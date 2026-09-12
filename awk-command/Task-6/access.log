@@ -1,0 +1,7 @@
+2026-09-12 10:01:23 INFO  GET /api/users 200 response_time=145ms
+2026-09-12 10:01:24 INFO  GET /api/events 200 response_time=87ms
+2026-09-12 10:01:25 WARN  GET /api/orders 500 response_time=1245ms
+2026-09-12 10:01:26 INFO  GET /api/users/10 200 response_time=230ms
+2026-09-12 10:01:27 ERROR POST /api/orders 500 response_time=1876ms
+2026-09-12 10:01:28 INFO  GET /api/events/10 200 response_time=95ms
+2026-09-12 10:01:29 WARN  GET /api/payment 504 response_time=3200ms
